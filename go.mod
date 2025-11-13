@@ -1,4 +1,4 @@
-module go-gzip-embedder
+module github.com/Artem3213212/go-gzip-embedder
 
 go 1.25.4
 
