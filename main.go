@@ -158,7 +158,7 @@ func main() {
 	flag.Parse()
 
 	f := NewFile(*pkgName)
-	c := f.Const()
+	c := f.Var()
 	genGzipHandler(f)
 	f.Line()
 	genRootHandler(f)
