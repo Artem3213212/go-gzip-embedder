@@ -24,7 +24,7 @@ The tool exposes several flags to configure its behavior:
 ### Installation
 
 ```shell script
-go install github.org/Artem3123212/go-gzip-embedder@latest
+go install github.com/Artem3213212/go-gzip-embedder@latest
 ```
 
 ### Use from cli

@@ -1,4 +1,4 @@
-module go-web-content-generartor
+module go-gzip-embedder
 
 go 1.25.4
 
