@@ -19,7 +19,7 @@ The tool exposes several flags to configure its behavior:
 | `--src`        | `.`                   | Folder with sources to embed.         |
 | `--dst`        | `web_data/handler.go` | Result file path.                     |
 | `--pkg-name`   | `web_data`            | Name of the generating package.       |
-| `--root-route` | `index.html`          | Name of file used route for / request |
+| `--root-route` | `/index.html`          | Name of file used route for / request |
 
 ---
 

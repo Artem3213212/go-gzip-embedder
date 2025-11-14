@@ -19,7 +19,7 @@ import (
 var srcPath = flag.String("src", ".", "Folder with sources to embed")
 var dstPath = flag.String("dst", "web_data/handler.go", "Result file path")
 var pkgName = flag.String("pkg-name", "web_data", "Name of the generating package")
-var rootRoute = flag.String("root-route", "index.html", "Name of file used route for / request")
+var rootRoute = flag.String("root-route", "/index.html", "Name of file used route for / request")
 
 var (
 	stringsContains = Qual("strings", "Contains")
