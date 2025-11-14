@@ -80,7 +80,7 @@ func genHandlerCall(g *Group, fileName string) {
 	}
 	makeGlobalGzippedBinConst(constId, data)
 
-	g.Case(Lit(fileName)).Block(
+	g.Case(Lit("/" + fileName)).Block(
 		Id("gzipHandler").Call(Id(constId), Lit(mime.TypeByExtension(path.Ext(fileName))), Id("w"), Id("r")),
 	)
 }
