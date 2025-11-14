@@ -38,8 +38,6 @@ go-gzip-embedder --src ./static --dst assets/handler.go --pkg-name assets
 
 ### Use with go generate
 
-### Use with go generate
-
 ```go
 //go:generate go-gzip-embedder --src ./static --dst assets/handler.go --pkg-name assets
 ```
