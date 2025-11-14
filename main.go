@@ -19,6 +19,7 @@ import (
 var srcPath = flag.String("src", ".", "Folder with sources to embed")
 var dstPath = flag.String("dst", "web_data/handler.go", "Result file path")
 var pkgName = flag.String("pkg-name", "web_data", "Name of the generating package")
+var rootRoute = flag.String("root-route", "index.html", "Name of file used route for / request")
 
 var (
 	stringsContains = Qual("strings", "Contains")
@@ -80,7 +81,15 @@ func genHandlerCall(g *Group, fileName string) {
 	}
 	makeGlobalGzippedBinConst(constId, data)
 
-	g.Case(Lit("/" + fileName)).Block(
+	httpPath := "/" + fileName
+	var curr_case *Statement
+	if httpPath == *rootRoute {
+		curr_case = g.Case(Lit("/"), Lit(httpPath))
+	} else {
+		curr_case = g.Case(Lit(httpPath))
+	}
+
+	curr_case.Block(
 		Id("gzipHandler").Call(Id(constId), Lit(mime.TypeByExtension(path.Ext(fileName))), Id("w"), Id("r")),
 	)
 }

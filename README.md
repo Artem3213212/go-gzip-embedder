@@ -14,11 +14,13 @@ This CLI tool allows you to embed static files (from a specified source folder) 
 
 The tool exposes several flags to configure its behavior:
 
-| Flag         | Default               | Description                     |
-|--------------|-----------------------|---------------------------------|
-| `--src`      | `.`                   | Folder with sources to embed.   |
-| `--dst`      | `web_data/handler.go` | Result file path.               |
-| `--pkg-name` | `web_data`            | Name of the generating package. |
+| Flag           | Default               | Description                           |
+|----------------|-----------------------|---------------------------------------|
+| `--src`        | `.`                   | Folder with sources to embed.         |
+| `--dst`        | `web_data/handler.go` | Result file path.                     |
+| `--pkg-name`   | `web_data`            | Name of the generating package.       |
+| `--root-route` | `index.html`          | Name of file used route for / request |
+
 ---
 
 ### Installation
